@@ -12,9 +12,13 @@ RUN rm -fv $(pwd)/config/tool_conf.xml && cp -v $(pwd)/mcell_galaxy/config/tool_
 RUN cd mcell_galaxy && git fetch --all 
 RUN rm -rfv $(pwd)/tools/*
 RUN cp -rv $(pwd)/mcell_galaxy/tools/mcell $(pwd)/tools/
+<<<<<<< HEAD
 RUN mkdir ~/bin/
 RUN cd ~/bin/ && wget -nc -O mcell.zip http://mmbios.org/mcell-3-4/mcell_34_linux-zip?format=raw && unzip mcell.zip && rm -fv mcell.zip
 RUN cd ~/bin/ && mv mcell_3.4_linux mcell && chmod a+x mcell
 RUN cp -v ~/bin/mcell /usr/bin/mcell
 
 
+=======
+RUN wget -nc --O mcell.zip http://mmbios.org/mcell-3-4/mcell_34_linux-zip?format=raw && unzip mcell.zip && rm -fv mcell.zip
+>>>>>>> a57ef98fa53623d302c1463ad09e269cd523b8df
